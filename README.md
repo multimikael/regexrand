@@ -15,7 +15,6 @@ Generate a string by calling `GenerateMatch(&b, re, moreLimit)`
 * `re` is a given `syntax.Regexp` regular expression. This can be created using `syntax.Parse`.
 * `moreLimit` is an `int` that determines the limit of "or more" operators. Using "or more" operator will generate a random integer between a minimum value and `moreLimit`.
 
-More documentation can be found on GoDoc: https://godoc.org/github.com/multimikael/proxy
 ### Example
 Here is a simple example of regexrand. This will print a string with a lowercase character and 1 or more (up to 10) digits between 1 and 9.
 ```go
