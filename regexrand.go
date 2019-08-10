@@ -33,7 +33,7 @@ func GenerateMatch(b *strings.Builder, re *syntax.Regexp, moreLimit int) {
 	default:
 		b.WriteString("<invalid op" + strconv.Itoa(int(re.Op)) + ">")
 	case syntax.OpNoMatch:
-		b.WriteString(`[^\x00-\x{10FFFF}]`)
+		b.WriteString(`<No Match operator is unsupported>`)
 	case syntax.OpEmptyMatch:
 		b.WriteString("")
 	case syntax.OpLiteral:
