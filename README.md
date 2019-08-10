@@ -15,6 +15,11 @@ Generate a string by calling `GenerateMatch(&b, re, moreLimit)`
 * `re` is a given `syntax.Regexp` regular expression. This can be created using `syntax.Parse`.
 * `moreLimit` is an `int` that determines the limit of "or more" operators. Using "or more" operator will generate a random integer between a minimum value and `moreLimit`.
 
+### Notes
+* Any character operators only uses ASCII 32 to 126. Same applies for *not* char class operators. 
+* End of text does not contain EOF, it just stops the futher writing to the builder.
+* No Match operator and Word Boundary is unsupported.
+
 ### Example
 Here is a simple example of regexrand. This will print a string with a lowercase character and 1 or more (up to 10) digits between 1 and 9.
 ```go
