@@ -36,7 +36,7 @@ import (
 func main() {
 	re, err := syntax.Parse(`[a-z][1-9]+`, syntax.Perl)
 	if err != nil {
-		fmt.Println(err.Error())
+		panic(err)
 	}
 	var b strings.Builder
 	regexrand.GenerateMatch(&b, re, 10)
