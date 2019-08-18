@@ -113,7 +113,7 @@ func GenerateMatch(b *strings.Builder, re *syntax.Regexp, moreLimit int) {
 			GenerateMatch(b, re.Sub[0], moreLimit)
 		}
 	case syntax.OpQuest:
-		if cryptoRandInt(0xFFFFFFFF) > 0x7FFFFFFF {
+		if cryptoRandInt(0x7FFFFFFF) > 0x3FFFFFFF {
 			GenerateMatch(b, re.Sub[0], moreLimit)
 		}
 	case syntax.OpRepeat:
